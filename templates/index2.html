@@ -36,15 +36,7 @@ and open the template in the editor.
     background-color: transparent;
     border-color: #f6b93b !important;
     transition: all 0.4s ease 0s;
-    }
-	    .btn { 
-            cursor: pointer; 
-            border: 1px solid #3498db; 
-            background-color: transparent; 
-            color: #3498db; 
-            font-size: 1.5em; 
-            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
-        } 
+    }     
   </style>
 
 </head>
@@ -63,9 +55,24 @@ and open the template in the editor.
     <center>
     <form action="{{ url_for('predict')}}"method="post">
         <h1>Enter the value of tumor features: </h1>
-        
-    	
-    <button class="btn"><input type="text" name="mean_radius" placeholder="Mean radius" required="required" /></button>
+        <style>
+		div.transparentbox {
+   opacity: 0.6;
+   margin: 30px;
+   border: 1px solid black;
+   background-color: #ffffff;
+   filter: alpha(opacity=50); /* This is for IE8 and other earlier browsers */
+}
+
+div.transparentbox p {
+   margin: 5%;
+   color: #000000;
+   font-weight: bold;
+}
+	    </style>
+	    
+    	<div class="transparentbox">
+        <input type="text" name="mean_radius" placeholder="Mean radius" required="required" />
         <input type="text" name="mean_texture" placeholder="Mean texture" required="required" />
 		<input type="text" name="mean_perimeter" placeholder="Mean perimeter" required="required" />
 		<input type="text" name="mean_area" placeholder="Mean area" required="required" />
@@ -99,6 +106,7 @@ and open the template in the editor.
     	<input type="text" name="worst_concave_points" placeholder="Worst concave points" required="required" />
         <input type="text" name="worst_symmetry" placeholder="'Worst symmetry" required="required" />
 		<input type="text" name="worst_fractal_dimension" placeholder="Worst fractal dimension" required="required" />
+	    </div>
         <br>
         <br>
         
@@ -136,12 +144,6 @@ border-color: blue;
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Add font awesome icons -->
-<centre><a href="https://www.facebook.com/badal.gami/" class="fa fa-facebook"></a>
-<a href="https://twitter.com/badb991" class="fa fa-twitter"></a>
-<a href="https://www.linkedin.com/in/badal-gami-0523641ba/" class="fa fa-linkedin"></a>
-<a href="https://www.instagram.com/badl_gami/" class="fa fa-instagram"></a></centre>
-
 <style>
 .fa {  
   padding: 80px;  
@@ -173,6 +175,13 @@ border-color: blue;
   color: white;
 }
 </style>
+	
+	<!-- Add font awesome icons -->
+<centre><a href="https://www.facebook.com/badal.gami/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/badb991" class="fa fa-twitter"></a>
+<a href="https://www.linkedin.com/in/badal-gami-0523641ba/" class="fa fa-linkedin"></a>
+<a href="https://www.instagram.com/badl_gami/" class="fa fa-instagram"></a></centre>
+
 	
  </div>
 
