@@ -37,6 +37,14 @@ and open the template in the editor.
     border-color: #f6b93b !important;
     transition: all 0.4s ease 0s;
     }
+	    .btn { 
+            cursor: pointer; 
+            border: 1px solid #3498db; 
+            background-color: transparent; 
+            color: #3498db; 
+            font-size: 1.5em; 
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); 
+        } 
   </style>
 
 </head>
@@ -56,7 +64,8 @@ and open the template in the editor.
     <form action="{{ url_for('predict')}}"method="post">
         <h1>Enter the value of tumor features: </h1>
         
-    	<input type="text" name="mean_radius" placeholder="Mean radius" required="required" />
+    	
+    <button class="btn"><input type="text" name="mean_radius" placeholder="Mean radius" required="required" /></button>
         <input type="text" name="mean_texture" placeholder="Mean texture" required="required" />
 		<input type="text" name="mean_perimeter" placeholder="Mean perimeter" required="required" />
 		<input type="text" name="mean_area" placeholder="Mean area" required="required" />
@@ -107,7 +116,7 @@ and open the template in the editor.
    <h1>{{ prediction_text }}</h1>
        </center>
    </div>
-<centre>	
+	
 <style>
 hr  
 {  
@@ -128,10 +137,10 @@ border-color: blue;
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Add font awesome icons -->
-<a href="https://www.facebook.com/badal.gami/" class="fa fa-facebook"></a>
+<centre><a href="https://www.facebook.com/badal.gami/" class="fa fa-facebook"></a>
 <a href="https://twitter.com/badb991" class="fa fa-twitter"></a>
 <a href="https://www.linkedin.com/in/badal-gami-0523641ba/" class="fa fa-linkedin"></a>
-<a href="https://www.instagram.com/badl_gami/" class="fa fa-instagram"></a>
+<a href="https://www.instagram.com/badl_gami/" class="fa fa-instagram"></a></centre>
 
 <style>
 .fa {  
@@ -164,7 +173,7 @@ border-color: blue;
   color: white;
 }
 </style>
-	</centre>
+	
  </div>
 
 </body>
