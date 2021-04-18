@@ -31,7 +31,7 @@ def predict():
     if output == 0:
         res_val = "Breast Cancer Detected"
     else:
-        res_val = "No Breast Cancer"
+        res_val = "No Breast Cancer Detected"
         
 
     return render_template('index2.html', prediction_text='{}'.format(res_val))
